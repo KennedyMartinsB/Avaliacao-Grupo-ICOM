@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item-list',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent {
+
+  @Input() id: number | undefined;
+  @Input() nome: string | undefined;
+  @Input() descricao: string | undefined;
+  @Input() produtora: string | undefined;
+  @Input() ano: number | undefined;
+  @Input() idadeMinima: number | undefined;
 
 }

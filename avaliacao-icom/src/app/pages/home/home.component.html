@@ -1,9 +1,19 @@
 <div class="container">
   <!-- <app-modal></app-modal> -->
   <div class="item-scrool">
-    <!-- <div *ngFor="let empresa of empresas" class="list-group-item">
-      <app-item-list [id]="empresa.id" [name]="empresa.name" [cnpj]="empresa.cnpj" [email]="empresa.email" [empresaObj]="empresa"></app-item-list>
-    </div> -->
-    <app-item-list></app-item-list>
+    <div *ngFor="let jogo of jogos" >
+      <app-item-list [id]="jogo.id" [nome]="jogo.nome" [ano]="jogo.ano" [produtora]="jogo.produtora" [idadeMinima]="jogo.idadeMinima" [descricao]="jogo.descricao"></app-item-list>
+    </div>
   </div>
 </div>
+
+
+<!-- export interface Jogo{
+  id: number;
+  nome: string;
+  ano: number;
+  produtora: string;
+  idadeMinima: number;
+  descricao : string;
+} -->
+
