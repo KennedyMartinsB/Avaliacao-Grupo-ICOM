@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  // assistir depois: https://www.youtube.com/watch?v=893uGY5E0XM
+
 }

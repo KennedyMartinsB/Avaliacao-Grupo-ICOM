@@ -1,0 +1,95 @@
+
+.item-body{
+  width: 100%;
+  border: 1px solid #969696;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  height: 56px;
+  color: #969696;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  // padding: 10px;
+
+  .item-body-container{
+    // background-color: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .item-info-group{
+    display: flex;
+    align-items: center;
+  }
+
+  .item-img{
+    // width: 40px;
+    // height: 40px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: red;
+    border: 1px solid #616161;
+    border-radius: 20px;
+    margin-left: 5px;
+    img{
+      // width: 15px;
+          width: 10px;
+    }
+  }
+
+  .item-info{
+    margin-left: 15px;
+    // margin-top: 6px;
+  }
+
+  .item-name{
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .item-description{
+    font-size: 10px;
+    margin-top: 1px;
+    margin-bottom: 0;
+  }
+}
+
+  .btn-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+// Btn
+.delete{
+background: rgb(226, 83, 83);
+}
+
+.edit{
+  background: #007ef5;
+}
+
+  .item-btn{
+    border-radius: 50%;
+    border: none;
+    // background: rgb(226, 83, 83);
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    i{
+      color: #FFFF;
+    }
+  }
+
+  .btn-default-color{
+  background-color: #630A37 !important;
+  color: #FFFF;
+}

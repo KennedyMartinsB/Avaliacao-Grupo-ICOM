@@ -1,0 +1,29 @@
+{
+  "jogos": [
+    {
+      "id": 1,
+      "nome": "league of legends",
+      "ano": 2009,
+      "produtora": "Riot Games",
+      "idadeMinima": 10,
+      "descricao": "MOBA"
+    },
+    {
+      "id": 2,
+      "nome": "league of legends",
+      "ano": 2009,
+      "produtora": "Riot Games",
+      "idadeMinima": 10,
+      "descricao": "MOBA"
+    },
+    {
+      "id": 3,
+      "nome": "league of legends",
+      "ano": 2009,
+      "produtora": "Riot Games",
+      "idadeMinima": 10,
+      "descricao": "MOBA"
+    }
+  ]
+}
+
