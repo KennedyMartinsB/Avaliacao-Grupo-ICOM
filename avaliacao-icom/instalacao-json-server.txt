@@ -1,0 +1,11 @@
+Json server:
+
+- Para realizar a instalação do json server entre na pasta do projeto e rode o comando abaixo:
+npm run json-server
+
+- Após a instalação do json server abra o terminal do vscode e rode o comando para setar o arquivo que 
+vai servir como back-end da aplicação:
+json-server --watch back/db.json
+
+- Por ultimo no terminal execute o comando abaixo para executar o back-end:
+npm run json-server
