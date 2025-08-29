@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Jogo } from '../interface/jogo';
+import { Jogo, novoJogo } from '../interface/jogo';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, map, Observable, throwError } from 'rxjs';
 
@@ -20,8 +20,7 @@ export class JogoService {
     const del_Url = `${this.API_URL}/${id}`;
     return this.httpClient.delete<void>(del_Url);
   }
-
-  postJogo(jogo: Jogo): Observable<{ sucesso: boolean } | string> {
+  postJogo(jogo: novoJogo): Observable<{ sucesso: boolean } | string> {
     return this.httpClient.post<Jogo>(this.API_URL, jogo).pipe(
       // Mapeia a resposta de sucesso
       map(() => {
