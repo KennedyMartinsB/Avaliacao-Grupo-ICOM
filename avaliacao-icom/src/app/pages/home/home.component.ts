@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JogoService } from '../../service/jogo.service';
 import { Jogo } from 'src/app/interface/jogo';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit{
   errorMessage: string | null = null;
   // assistir depois: https://www.youtube.com/watch?v=893uGY5E0XM
 
-  constructor(private jogoService: JogoService) {}
+  constructor(private jogoService: JogoService, private router: Router) {}
 
   ngOnInit(){
     this.listarJogos();
@@ -32,6 +33,11 @@ export class HomeComponent implements OnInit{
         console.log('Operação de carregamento de empresas concluída (Observable completo).');
       }
     });
+  }
+
+  redirectRegistrer() {
+    // Redireciona para o caminho 'outra-pagina'
+    this.router.navigate(['/cadastro']);
   }
 
 }

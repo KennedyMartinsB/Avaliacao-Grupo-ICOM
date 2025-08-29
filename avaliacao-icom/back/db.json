@@ -1,7 +1,7 @@
 {
   "jogo": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "league of legends",
       "ano": 2009,
       "produtora": "Riot Games",
@@ -9,7 +9,7 @@
       "descricao": "MOBA"
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "league of legends",
       "ano": 2009,
       "produtora": "Riot Games",
@@ -17,7 +17,7 @@
       "descricao": "MOBA"
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "league of legends",
       "ano": 2009,
       "produtora": "Riot Games",
@@ -26,4 +26,3 @@
     }
   ]
 }
-

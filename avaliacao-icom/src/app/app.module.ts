@@ -7,13 +7,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    ItemListComponent
+    ItemListComponent,
+    CadastroFormComponent
   ],
   imports: [
     BrowserModule,

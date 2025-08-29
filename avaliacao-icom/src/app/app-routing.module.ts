@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
 
 const routes: Routes = [
   {
-    path: '**',
+    path: '',
     component: HomeComponent
+  },
+  {
+    path: 'cadastro',
+    component: CadastroFormComponent
   }
 ];
 
