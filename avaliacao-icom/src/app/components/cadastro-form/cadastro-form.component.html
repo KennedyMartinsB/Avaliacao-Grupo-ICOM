@@ -1,69 +1,69 @@
-<div class="container">
-  <div class="form-body">
+<section class="formulario">
+  <div class="container">
     <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
-      <!-- Campo NOME -->
-      <div>
-        <label for="nome">Nome:</label>
-        <input id="nome" type="text" formControlName="nome">
+      <h3 class="cadastro-form-title">Preencha todos os dados abaixo</h3>
+      <div class="form-field">
+         <label for="nome"class="cadastro-title">Nome:</label>
+        <input id="nome" type="text" formControlName="nome" class="cadastro-inpt">
 
         <div *ngIf="cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched">
-          <p *ngIf="cadastroForm.get('nome')?.errors?.['required']">
+          <p *ngIf="cadastroForm.get('nome')?.errors?.['required']" class="warning">
             O nome é obrigatório.
           </p>
-          <p *ngIf="cadastroForm.get('nome')?.errors?.['minlength']">
+          <p *ngIf="cadastroForm.get('nome')?.errors?.['minlength']" class="warning">
             O nome deve ter no mínimo 3 caracteres.
           </p>
         </div>
       </div>
 
       <!-- Campo ANO -->
-      <div>
-        <label for="ano">Ano de Lançamento:</label>
-        <input id="ano" type="text" formControlName="ano">
+      <div class="form-field">
+        <label for="ano" class="cadastro-title">Ano de Lançamento:</label>
+        <input id="ano" type="number" formControlName="ano" class="cadastro-inpt">
 
         <div *ngIf="cadastroForm.get('ano')?.invalid && cadastroForm.get('ano')?.touched">
-          <p *ngIf="cadastroForm.get('ano')?.errors?.['required']">
+          <p *ngIf="cadastroForm.get('ano')?.errors?.['required']" class="warning">
             O ano é obrigatório.
           </p>
-          <p *ngIf="cadastroForm.get('ano')?.errors?.['pattern']">
+          <p *ngIf="cadastroForm.get('ano')?.errors?.['pattern']" class="warning">
             O ano deve ter 4 dígitos numéricos.
           </p>
         </div>
       </div>
 
       <!-- Campo PRODUTORA -->
-      <div>
-        <label for="produtora">Produtora:</label>
-        <input id="produtora" type="text" formControlName="produtora">
+      <div class="form-field">
+        <label for="produtora" class="cadastro-title">Produtora:</label>
+        <input id="produtora" type="text" formControlName="produtora" class="cadastro-inpt">
 
-        <p *ngIf="cadastroForm.get('produtora')?.errors?.['required'] && cadastroForm.get('produtora')?.touched">
+        <p *ngIf="cadastroForm.get('produtora')?.errors?.['required'] && cadastroForm.get('produtora')?.touched" class="warning">
           A produtora é obrigatória.
         </p>
       </div>
 
       <!-- Campo IDADE MÍNIMA -->
-      <div>
-        <label for="idadeMinima">Idade Mínima:</label>
-        <input id="idadeMinima" type="number" formControlName="idadeMinima">
+      <div class="form-field">
+        <label for="idadeMinima" class="cadastro-title">Idade Mínima:</label>
+        <input id="idadeMinima" type="number" formControlName="idadeMinima" class="cadastro-inpt">
 
-        <p *ngIf="cadastroForm.get('idadeMinima')?.errors?.['required'] && cadastroForm.get('idadeMinima')?.touched">
+        <p *ngIf="cadastroForm.get('idadeMinima')?.errors?.['required'] && cadastroForm.get('idadeMinima')?.touched" class="warning">
           A idade mínima é obrigatória.
         </p>
       </div>
 
       <!-- Campo DESCRIÇÃO -->
-      <div>
-        <label for="descricao">Descrição:</label>
-        <textarea id="descricao" formControlName="descricao"></textarea>
+      <div class="form-field">
+        <label for="descricao" class="cadastro-title">Descrição:</label>
+        <input id="descricao" type="text" formControlName="descricao" class="cadastro-inpt">
 
-        <p *ngIf="cadastroForm.get('descricao')?.errors?.['required'] && cadastroForm.get('descricao')?.touched">
+        <p *ngIf="cadastroForm.get('descricao')?.errors?.['required'] && cadastroForm.get('descricao')?.touched" class="warning">
           A descrição é obrigatória.
         </p>
       </div>
 
-      <button type="submit" [disabled]="!cadastroForm.valid">
+       <button type="submit" [disabled]="!cadastroForm.valid" class="cadastro-btn">
         Cadastrar
       </button>
     </form>
   </div>
-</div>
+</section>
