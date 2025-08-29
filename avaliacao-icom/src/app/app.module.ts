@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

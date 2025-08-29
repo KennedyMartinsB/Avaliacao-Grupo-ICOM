@@ -1,1 +1,69 @@
-<p>cadastro-form works!</p>
+<div class="container">
+  <div class="form-body">
+    <form [formGroup]="cadastroForm" (ngSubmit)="onSubmit()">
+      <!-- Campo NOME -->
+      <div>
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" formControlName="nome">
+
+        <div *ngIf="cadastroForm.get('nome')?.invalid && cadastroForm.get('nome')?.touched">
+          <p *ngIf="cadastroForm.get('nome')?.errors?.['required']">
+            O nome é obrigatório.
+          </p>
+          <p *ngIf="cadastroForm.get('nome')?.errors?.['minlength']">
+            O nome deve ter no mínimo 3 caracteres.
+          </p>
+        </div>
+      </div>
+
+      <!-- Campo ANO -->
+      <div>
+        <label for="ano">Ano de Lançamento:</label>
+        <input id="ano" type="text" formControlName="ano">
+
+        <div *ngIf="cadastroForm.get('ano')?.invalid && cadastroForm.get('ano')?.touched">
+          <p *ngIf="cadastroForm.get('ano')?.errors?.['required']">
+            O ano é obrigatório.
+          </p>
+          <p *ngIf="cadastroForm.get('ano')?.errors?.['pattern']">
+            O ano deve ter 4 dígitos numéricos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Campo PRODUTORA -->
+      <div>
+        <label for="produtora">Produtora:</label>
+        <input id="produtora" type="text" formControlName="produtora">
+
+        <p *ngIf="cadastroForm.get('produtora')?.errors?.['required'] && cadastroForm.get('produtora')?.touched">
+          A produtora é obrigatória.
+        </p>
+      </div>
+
+      <!-- Campo IDADE MÍNIMA -->
+      <div>
+        <label for="idadeMinima">Idade Mínima:</label>
+        <input id="idadeMinima" type="number" formControlName="idadeMinima">
+
+        <p *ngIf="cadastroForm.get('idadeMinima')?.errors?.['required'] && cadastroForm.get('idadeMinima')?.touched">
+          A idade mínima é obrigatória.
+        </p>
+      </div>
+
+      <!-- Campo DESCRIÇÃO -->
+      <div>
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" formControlName="descricao"></textarea>
+
+        <p *ngIf="cadastroForm.get('descricao')?.errors?.['required'] && cadastroForm.get('descricao')?.touched">
+          A descrição é obrigatória.
+        </p>
+      </div>
+
+      <button type="submit" [disabled]="!cadastroForm.valid">
+        Cadastrar
+      </button>
+    </form>
+  </div>
+</div>
