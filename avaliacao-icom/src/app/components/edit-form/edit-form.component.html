@@ -1,0 +1,48 @@
+<section class="formulario">
+  <div class="container">
+    <!-- <form [formGroup]="editarForm" (ngSubmit)=""></form> -->
+    <form [formGroup]="editarForm" (ngSubmit)="salvarEdicao()">
+      <h3 class="cadastro-form-title">Preencha todos os dados abaixo</h3>
+
+       <div class="form-field">
+         <label for="id"class="cadastro-title">Id:</label>
+        <input id="id" type="text" formControlName="id" class="cadastro-inpt">
+      </div>
+
+      <div class="form-field">
+         <label for="nome"class="cadastro-title">Nome:</label>
+        <input id="nome" type="text" formControlName="nome" class="cadastro-inpt">
+      </div>
+
+      <!-- Campo ANO -->
+      <div class="form-field">
+        <label for="ano" class="cadastro-title">Ano de Lançamento:</label>
+        <input id="ano" type="number" formControlName="ano" class="cadastro-inpt">
+
+      </div>
+
+      <!-- Campo PRODUTORA -->
+      <div class="form-field">
+        <label for="produtora" class="cadastro-title">Produtora:</label>
+        <input id="produtora" type="text" formControlName="produtora" class="cadastro-inpt">
+      </div>
+
+      <!-- Campo IDADE MÍNIMA -->
+      <div class="form-field">
+        <label for="idadeMinima" class="cadastro-title">Idade Mínima:</label>
+        <input id="idadeMinima" type="number" formControlName="idadeMinima" class="cadastro-inpt">
+      </div>
+
+      <!-- Campo DESCRIÇÃO -->
+      <div class="form-field">
+        <label for="descricao" class="cadastro-title">Descrição:</label>
+        <input id="descricao" type="text" formControlName="descricao" class="cadastro-inpt">
+
+      </div>
+
+      <button type="submit" class="cadastro-btn">
+        Editar
+      </button>
+    </form>
+  </div>
+</section>

@@ -9,6 +9,7 @@ import { ItemListComponent } from './components/item-list/item-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditFormComponent } from './components/edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     ItemListComponent,
-    CadastroFormComponent
+    CadastroFormComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,7 @@
       <button class="item-btn delete" (click)="deleteGame(id)">
         <i class="fas fa-trash"></i>
       </button>
-      <button class="item-btn edit">
+      <button class="item-btn edit" [routerLink]="['editar', id]">
         <i class="fas fa-pencil"></i>
       </button>
       <!-- <app-modal-edicao [empresaData]="empresaObj"/> -->

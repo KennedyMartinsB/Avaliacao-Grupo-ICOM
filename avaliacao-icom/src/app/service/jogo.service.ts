@@ -40,25 +40,48 @@ export class JogoService {
     );
   }
 
-  putGame(jogoAtualizado: Jogo): Observable<{sucess: Boolean} | string> {
-    return this.httpClient.put<Jogo>(this.API_URL, {
-      id: jogoAtualizado.id, nome: jogoAtualizado.nome, ano: jogoAtualizado.ano,
-      produtora: jogoAtualizado.produtora, idadeMinima: jogoAtualizado.idadeMinima,
-      descricao: jogoAtualizado.descricao
-    }).pipe(
+  // putGame(jogoAtualizado: novoJogo): Observable<{sucess: Boolean} | string> {
+  //   return this.httpClient.put<Jogo>(this.API_URL, {
+  //     nome: jogoAtualizado.nome, ano: jogoAtualizado.ano,
+  //     produtora: jogoAtualizado.produtora, idadeMinima: jogoAtualizado.idadeMinima,
+  //     descricao: jogoAtualizado.descricao
+  //   }).pipe(
+  //     map(() => {
+  //       return { sucess: true }
+  //     }),
+  //     catchError((error: HttpErrorResponse)=>{
+  //       let messageError = 'Erro ao realizar a requisição de update.';
+  //       if (error.error instanceof ErrorEvent) {
+  //         messageError = `Erro: ${error.error.message}`;
+  //       } else {
+  //         messageError = `Erro no servidor: ${error.status} - ${error.message}`;
+  //       }
+  //       return throwError(() => messageError);
+  //     })
+  //   )
+  // }
+
+  // putGame(jogoAtualizado: novoJogo, id: any): Observable<novoJogo>{
+  //   const URL = `${this.API_URL}/${id}`
+  //   return this.httpClient.put<novoJogo>(URL, {
+  //     nome: jogoAtualizado.nome,
+  //     ano: jogoAtualizado.ano,
+  //     produtora: jogoAtualizado,
+  //     idadeMinima: jogoAtualizado.idadeMinima,
+  //     descricao: jogoAtualizado.descricao
+  //   })
+  // }
+
+   putGame(jogoAtualizado: novoJogo, id: any): Observable<{ sucesso: boolean }> {
+    const URL = `${this.API_URL}/${id}`;
+
+    // AQUI: Envie o objeto `jogoAtualizado` completo
+    return this.httpClient.put<novoJogo>(URL, jogoAtualizado).pipe(
+      // Mapeia a resposta de sucesso para o JSON desejado
       map(() => {
-        return { sucess: true }
-      }),
-      catchError((error: HttpErrorResponse)=>{
-        let messageError = 'Erro ao realizar a requisição de update.';
-        if (error.error instanceof ErrorEvent) {
-          messageError = `Erro: ${error.error.message}`;
-        } else {
-          messageError = `Erro no servidor: ${error.status} - ${error.message}`;
-        }
-        return throwError(() => messageError);
+        return { sucesso: true };
       })
-    )
+    );
   }
 
   getGameById(id: any): Observable<Jogo>{
