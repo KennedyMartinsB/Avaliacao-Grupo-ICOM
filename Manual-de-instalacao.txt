@@ -1,0 +1,21 @@
+Orientações de configuração da maquina:
+
+	- Certifique-se que a versão instalada do node na maquina seja a 16 ou superior.
+	- Verifique a versão do angular instalada na maquina e caso não haja utilize este comando: npm install -g @angular/cli@16.0.6
+
+Orientações para rodar o projeto:
+
+	- Antes de iniciar o projeto rode o "npm i" para instalar todas as dependências do projeto.
+	- Após a instalações das dependências rode o "ng serve" para inicializar a aplicação.
+
+Orientações do Json server:
+
+	- Para realizar a instalação do json server entre na pasta do projeto e rode o comando abaixo:
+	npm run json-server.
+
+	- Após a instalação do json server abra o terminal do vscode e rode o comando para setar o arquivo que 
+	vai servir como back-end da aplicação:
+	json-server --watch back/db.json
+
+	- Por ultimo no terminal execute o comando abaixo para executar o back-end:
+	npm run json-server.
