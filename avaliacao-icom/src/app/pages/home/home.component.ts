@@ -23,14 +23,15 @@ export class HomeComponent implements OnInit{
     this.jogoService.getGames().subscribe({
       next: (data) => {
         this.jogos = data;
-        console.log('Dados da API recebidos com sucesso:', this.jogos);
+        console.log('Dados da API recebidos com sucesso!!!');
+        // console.log('Dados da API recebidos com sucesso:', this.jogos);
       },
       error: (error: Error) => {
         this.errorMessage = error.message; // Atribui a mensagem de erro
-        console.error('Erro ao carregar empresas:', error);
+        console.error('Erro ao carregar jogos:', error);
       },
       complete: () => {
-        console.log('Operação de carregamento de empresas concluída (Observable completo).');
+        console.log('Operação de carregamento de jogos concluída (Observable completo).');
       }
     });
   }

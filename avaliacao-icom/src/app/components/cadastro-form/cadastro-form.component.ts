@@ -39,7 +39,7 @@ export class CadastroFormComponent implements OnInit{
           console.error('Erro no cadastro do jogo:', error);
         },
         complete: () => {
-          console.log('Operação de cadastro de empresa concluída.');
+          console.log('Operação de cadastro de jogo concluída.');
           this.router.navigate(['']);
         }
       })

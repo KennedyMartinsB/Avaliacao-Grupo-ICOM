@@ -28,7 +28,7 @@ export class ItemListComponent {
         window.location.reload()
       },
       error: (error: Error) => {
-        console.log("Erro ao excluir empresa: ", error)
+        console.log("Erro ao excluir jogo: ", error)
       },
       complete: () => {
         console.log("Operação de exclusão foi feita com sucesso!!!");
