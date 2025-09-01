@@ -1,11 +1,20 @@
 <nav class="navbar bg-body-tertiary">
   <div class="container">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/home">
       <img src="../../../assets/img/joystick.png" alt="Bootstrap" width="60" height="60">
     </a>
+
     <div class="navbar-text">
-      Kennedy Martins
-      <img src="../../../assets/img/knd.png" class="profile-pic" alt="foto de perfil" width="30" height="30">
+      <div *ngIf="router.url !== '/home'">
+        <button class="back-button" (click)="voltarHome()">
+          Voltar para a Home
+        </button>
+      </div>
+
+      <div *ngIf="router.url === '/home'">
+        Kennedy Martins
+        <img src="../../../assets/img/knd.png" class="profile-pic" alt="foto de perfil" width="30" height="30">
+      </div>
     </div>
   </div>
 </nav>

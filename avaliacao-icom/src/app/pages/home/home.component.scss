@@ -1,5 +1,4 @@
 .item-scrool{
-  // background-color: red;
   overflow-y: scroll;
   scroll-behavior: smooth;
   width: 100%;
@@ -7,19 +6,18 @@
   margin: 50px 0px;
 }
 
-// margin: 50px 0px;
-
 .btn-registro{
     width: 100%;
     border: 1px solid #969696;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     height: 56px;
-    color: #969696;
+    font-size: 15px;
+    font-weight: 600;
     transition: 0.3s ease-in-out;
     margin-top: 50px;
     &:hover{
-      background-color: #630A37;
+      background-color: #007ef5;
       border: 1px solid #FFFF;
       color: #FFFF;
     }
