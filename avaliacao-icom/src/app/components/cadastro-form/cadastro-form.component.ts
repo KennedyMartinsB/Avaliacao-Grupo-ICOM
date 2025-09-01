@@ -40,7 +40,7 @@ export class CadastroFormComponent implements OnInit{
         },
         complete: () => {
           console.log('Operação de cadastro de jogo concluída.');
-          this.router.navigate(['']);
+          this.router.navigate(['home']);
         }
       })
     }
